@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbl_activityType;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_activityidresult;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_activitytyperesult;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_Date;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_DateResult;
 
 
 

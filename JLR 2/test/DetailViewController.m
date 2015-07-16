@@ -70,7 +70,8 @@ int *flag;
     NSLog(@"%@",app_delegate.Array1);
     NSLog(@"%@", [[app_delegate.Array1 objectAtIndex:0] valueForKey:@"positionName"]);
     
-    
+//    self.todaysActivities_TV.separatorInset = UIEdgeInsetsZero;
+//    self.todaysActivities_TV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     
     self.slices = [NSMutableArray arrayWithCapacity:4];
@@ -327,7 +328,7 @@ int *flag;
         }
         cell.lbl_activityPerson.text = @"Vishwas Roy";
         cell.lbl_activityType.text = @"Test Drive :";
-        cell.lbl_activitySummary.text = @"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+        cell.lbl_activitySummary.text = @"PPL          :";
         cell.lbl_activityTime.text = @"9 AM";
         cell.backgroundColor = [UIColor clearColor];
         return cell;
@@ -433,7 +434,23 @@ int *flag;
     [Leads_TV  reloadData];
 }
 
-
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Remove seperator inset
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    // Prevent the cell from inheriting the Table View's margin settings
+    if ([cell respondsToSelector:@selector(setPreservesSuperviewLayoutMargins:)]) {
+        [cell setPreservesSuperviewLayoutMargins:NO];
+    }
+    
+    // Explictly set your cell's layout margins
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
 
 -(void)textFieldDidBeginEditing:(UITextField *)sender
 {

@@ -176,11 +176,13 @@
             cell = [[dasboard_Email_tableCell_VC  alloc] initWithStyle:UITableViewCellStyleDefault
                                                           reuseIdentifier:MyIdentifier];
         }
-        cell.lbl_activityid.text = @"Activity id";
+        cell.lbl_activityid.text = @"Activity id  :";
     cell.lbl_activityidresult.text = @"VAT454KO";
-        cell.lbl_activityType.text = @"Activity Type";
+        cell.lbl_activityType.text = @"Activity Type  :";
         cell.lbl_activitytyperesult.text = @"Test Drive";
-      
+      cell.lbl_Date.text=@"Date  :";
+        cell.lbl_DateResult.text=@"16-JULY-2015";
+        
         return cell;
     }
     /*
