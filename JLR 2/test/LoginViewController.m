@@ -43,8 +43,8 @@
     
     
     
-  //  self.username.text=@"SJAIN_10102";
- //   self.password.text=@"HPY151NWYR";
+    self.username.text=@"SJAIN_10102";
+    self.password.text=@"HPY151NWYR";
   //   positionlist = [position_LIST sharedmanager];
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.username.bounds byRoundingCorners:(UIRectCornerTopLeft | UIRectCornerTopRight) cornerRadii:CGSizeMake(5.0, 5.0)];
      UIBezierPath *maskPath1 = [UIBezierPath bezierPathWithRoundedRect:self.password.bounds byRoundingCorners:(UIRectCornerBottomLeft | UIRectCornerBottomRight) cornerRadii:CGSizeMake(5.0, 5.0)];
